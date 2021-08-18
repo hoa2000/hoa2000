@@ -1,0 +1,21 @@
+<?php
+require_once("Models/cls_brand.php");
+$id="";
+$act="";
+$module="";
+if(isset($_REQUEST["id"]))
+{
+	$id=$_REQUEST['id'];
+}
+if(isset($_REQUEST['act']))
+{
+	$act=$_REQUEST['act'];
+}
+if(isset($_REQUEST['module']))
+{
+	$module=$_REQUEST['module'];
+}
+$brand=new clsbrand();
+$ketqua=$brand->DSbrand();
+require("view/include/menu.php");
+?>
